@@ -15,6 +15,8 @@ async function start() {
   let image
   let canvas
   document.body.append('Loaded')
+  document.querySelector('.loader').classList.add('hidden')
+  imageUpload.classList.remove('hidden')
   imageUpload.addEventListener('change', async () => {
     if (image) image.remove()
     if (canvas) canvas.remove()

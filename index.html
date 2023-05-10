@@ -24,9 +24,41 @@
       top: 0;
       left: 0;
     }
+
+    img {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .loader {
+      border: 8px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 8px solid #3498db;
+      width: 42px;
+      height: 42px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <input type="file" id="imageUpload">
+  <input type="file" id="imageUpload" class="hidden">
+  <div class="loader"></div>
 </body>
 </html>
